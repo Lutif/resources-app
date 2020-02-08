@@ -1,5 +1,5 @@
-{    "db":{
-        "URI":"mongodb://localhost:2017/",
-        "dbname":"links"
+{       "db":{
+        "domain":"mongodb://localhost:27017/",
+        "dbname":"resourcesdb"
     }
 }
