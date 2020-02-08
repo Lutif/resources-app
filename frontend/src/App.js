@@ -5,14 +5,9 @@ import saveLinkdb from './requests/addLink';
 import getLinks from './requests/getLinks';
 import deleteLinkdb from './requests/deleteLink';
 
-const google = {
-    href:'www.google.com',
-    title:'Google',
-    description:'Search Engine to search over internet'
-}
 
 export default function App() {
-    const [links,setLinks]=useState([google])
+    const [links,setLinks]=useState([])
 
     useEffect(() => {
             getLinks()
@@ -39,8 +34,8 @@ export default function App() {
             <h1>Keep Rresouces for later refrence</h1>
             <CreateArea addLink={addLink}/>
             {links.map(link => <Link
-                id={String(link._id)}
-                key={String(link._id)}
+                id={String(link.id)}
+                key={String(link.id)}
                 href={link.href}
                 title={link.title}
                 description={link.description}
