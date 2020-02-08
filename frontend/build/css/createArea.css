@@ -1,0 +1,26 @@
+.create-area-container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.create-area-title{
+    margin-bottom: 0.6rem;
+    line-height: 2.5;
+}
+.create-area-link{
+    margin-bottom: 0.6rem;
+    line-height: 2;
+}
+.create-area-description{
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
+    height: 4rem;
+}
+.create-area-button{
+    margin: auto;
+    margin-bottom: 0.6rem;
+    line-height: 2.5;
+    width: 40%;
+    
+}
