@@ -44,7 +44,9 @@ if (process.env.NODE_ENV === 'production') {
       res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
     });
   }
-  
+app.use(router)
+app.use(getrouter)
+    
 
 // app.use(router);
 
