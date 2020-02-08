@@ -5,7 +5,10 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const createdb = require('./database/createDatabase')
 const path =require('path')
-const Links = require('./database/models/Links') // mongose data model
+const Links = require('./database/models/Links')
+const getrouter = require('./routes/api/links/getLinks')
+
+// mongose data model
 // process.env["NODE_CONFIG_DIR"] = __dirname + "/config/";
 // const config = require("config");
 
@@ -27,6 +30,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(router)
+app.use(getrouter)
 
 console.log(process.env.NODE_ENV)
 
