@@ -24,8 +24,11 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-process.env.NODE_ENV = 'production';
+app.use(router)
+// process.env.NODE_ENV = 'production';
+
 console.log(process.env.NODE_ENV)
+
 if (process.env.NODE_ENV === 'production') {
     // Set static folder
     app.use(express.static('frontend/build'));
