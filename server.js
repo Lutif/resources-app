@@ -24,7 +24,7 @@ createdb() //start mongodb server
 //     href: 'www.facebook.com',
 //     description:'social media network'
 // }]
-
+process.env.NODE_ENV = 'productio'
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -39,7 +39,6 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'));
   
     app.get('/', (req, res) => {
-      console.log(path.resolve(__dirname, 'client', 'build', 'index.html'));
       res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
     });
   }

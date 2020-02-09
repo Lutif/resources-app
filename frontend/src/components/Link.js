@@ -7,7 +7,7 @@ export default function Link(props){
     }
     return(
     <div className="link-container">
-        <p className="link-title"><a href={props.href}>{props.title}</a></p>
+            <p className="link-title"><a href={props.href}>{props.title}</a></p>
             {
                 (props.description) ? <p className="link-description">{props.description}</p> : null
             }

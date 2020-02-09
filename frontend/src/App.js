@@ -23,6 +23,7 @@ export default function App() {
     }
 
     function deleteLink(id) {
+        console.log("in frontend delete function id is",id)
         deleteLinkdb(id)
             .then(linksList => {
             setLinks([...linksList])
@@ -34,8 +35,8 @@ export default function App() {
             <h1>Keep Rresouces for later refrence</h1>
             <CreateArea addLink={addLink}/>
             {links.map(link => <Link
-                id={String(link.id)}
-                key={String(link.id)}
+                id={String(link._id)}
+                key={String(link._id)}
                 href={link.href}
                 title={link.title}
                 description={link.description}
