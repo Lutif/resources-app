@@ -24,7 +24,7 @@ createdb() //start mongodb server
 //     href: 'www.facebook.com',
 //     description:'social media network'
 // }]
-process.env.NODE_ENV = 'productio'
+// process.env.NODE_ENV = 'productio'
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
