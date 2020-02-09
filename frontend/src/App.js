@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
 import CreateArea from './components/CreateArea';
 import Link from './components/Link';
+
 import saveLinkdb from './requests/addLink';
 import getLinks from './requests/getLinks';
+
 import deleteLinkdb from './requests/deleteLink';
 
 
@@ -23,7 +26,7 @@ export default function App() {
     }
 
     function deleteLink(id) {
-        console.log("in frontend delete function id is",id)
+        // console.log("in frontend delete function id is",id)
         deleteLinkdb(id)
             .then(linksList => {
             setLinks([...linksList])

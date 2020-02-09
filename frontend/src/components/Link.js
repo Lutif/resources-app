@@ -1,4 +1,6 @@
 import React from 'react';
+import { Card ,Button,Badge } from 'react-bootstrap';
+
 
 export default function Link(props){
     
@@ -6,13 +8,19 @@ export default function Link(props){
         props.delete(props.id)
     }
     return(
-    <div className="link-container">
-            <p className="link-title"><a href={props.href}>{props.title}</a></p>
+        <Card className="link-container">
+            
+            <Card.Title className="link-title"><a href={props.href}>{props.title}</a><Badge>Delete</Badge></Card.Title>
             {
-                (props.description) ? <p className="link-description">{props.description}</p> : null
+                (props.description) ? <Card.Text className="link-description">{props.description}</Card.Text> : null
             }
-            <button className="link-delete-button" onClick={handleDelete}>Delete</button>
+            <Button
+                variant="outline-info"
+                size='sm'
+                className="link-delete-button"
+                onClick={handleDelete}>Delete
+            </Button>
     
-    </div>)
+    </Card>)
             
 }
