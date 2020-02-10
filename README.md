@@ -1,4 +1,4 @@
-# resources-app
+# Resources-app
 Utility app to bookmark all website links for later use
 
 ## Motivation
